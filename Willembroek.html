@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mapStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!-- selectie van content die JS invoert op de pagina, het defer attribuut zorgt dat het script pas wordt uitgevoerd zodra de pagina geladen is -->
+        <script src="./js/pageContent.js" defer></script>
+        <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+    <link rel="stylesheet" href="css/mapStyle.css">
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+    <script src="./js/map2Script.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <title>hemiksem</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"> <img id="imgnav" src="assets/Ontwerp_zonder_titel__3_-removebg-preview.png" alt="logo"></a>
+            <ul id="navlist">
+                <li class="nav" id="nav1"><a class="algemeen" href="index.html">Home</a></li>
+                <li id="nav2">
+                    <a class="algemeen" id="dropelement" href="wandeling.html">Wandelingen</a>
+                </li>
+                <li id="nav3"><a class="algemeen" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <figure>
+                <img class="about" src="./assets/Willembroek.png" alt="Willebroek">
+                <figcaption>Kasteel Den bocht - <a href="https://stock.adobe.com/contributor/283102/geert-huysman">Geert Huysman</a></figcaption>
+            </figure>
+            <article class="pt1a">
+                <h1 class="pt1">Willebroek</h1>
+                <p>Willebroek is een plaats en gemeente in de provincie Antwerpen. De gemeente telt ruim 26.000 inwoners. Willebroek is de hoofdplaats van het gelijknamige gerechtelijk kanton, maar behoort tot het kieskanton Mechelen.</p>
+                <h2 class="pt1">Kasteel Den bocht</h2>
+                <p>Kasteel Den bocht is erfgoed van Willebroek en kan bezichtigd worden van op afstand met een mooi zicht waar water en natuur een mooi beeld geeft over dit kasteel. <a class="pt" href="https://www.bezoekwillebroek.be/erfgoed/kasteel-de-bocht/">Meer weten?</a></p>
+                <h2 class="pt1">Omgeving</h2>
+                <p>Willebroek bevind zich naast Boom en ligt ook aan de rivier de Rupel en wordt doorsneden door het Zeekanaal Brussel-Schelde. Naast Willebroek zelf bestaat de gemeente nog uit de deelgemeenten Blaasveld, Heindonk en Tisselt. Ten noorden van het centrum van Willebroek, tegen de Rupel, ligt het gehucht Klein-Willebroek.</p>
+                <h2 class="pt1">Rupelstreek</h2>
+                <p>Willebroek is één van de gemeente aan de Rupel, hiervan Rupelstreek!</p>
+                <div class="react">   
+                    <form class="comment" action="">
+                        <textarea class="comment" name="discription" placeholder="antwoord..." required></textarea>
+                        <button class="fa button"><i class="fa fa-plane"></i></button>  <!-- font awesome - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_icon_buttons-->
+                    </form>
+                    <!-- <div class="likes">
+                        <p id="aantalLikes"></p>
+                        <button id="like" class="fa button"><i class="fa fa-heart"></i></button>
+                    </div> -->
+                    <button class="like__btn">
+                        <span id="count">0</span>
+                        <span id="icon"><i class="far fa-heart"></i></span>
+                     </button>
+                </div>            
+            </article>
+        </section>
+
+        <hr class="pt1">
+
+        <section class="navigate">
+            <div class="mk">
+                <article id="map2" class="map">
+                    <div id="apMap"></div>
+                </article>
+                <article class="knooppunten">
+                    <h1 class="pt1">Knooppunten</h1>
+                    <ul>
+                        <li class="knpt">startpunt</li>
+                        <li class="knpt">knooppunt A</li>
+                        <li class="knpt">knooppunt B</li>
+                        <li class="knpt">knooppunt C</li>
+                        <li class="knpt">knooppunt D</li>
+                        <li class="knpt">knooppunt E</li>
+                    </ul>
+                </article>
+            </div>
+            <article class="pt1b">
+                <h1 class="pt1">Route beschrijving</h1>
+                <p>We starten de route aan het Veerhuis aan het Louis De Naeyerkaai en lopen verder naar de Heindonkstraat dat rechtendoor op onze linkerkant, eerste afslag bevind. We lopen deze straat door tot we komen aan Knooppunt A dat 6km verderop bevind op dezelfde straat. Eens we aankomen gaan we verder door naar knooppunt B dat verder bevind in Heindonk, de gemeente naast Willebroek, we moeten hiervoor de straat door blijven gaan tot het einde dat we niet meer verder rechtdoor kunnen, dan nemen we het wandelpad door de natuur om zo de Rupeldijk te bereiken. We lopen deze straat door tot het einde waar een nieuwe straat begint en waar deze straat samen aankomt met de Kleine Bergen (straat/weg). We gaan van dit knooppunt naar rechts en lopen zo door de Kleine Bergen (straat/weg) naar het einde van de straat rechtendoor naar knooppunt C. Als we aankomen gaan zo rechts afslaan in de Edmun Verheydenstraat zo door naar het volgende knoopunt (D). We gaan rechtendoor tot we 2 kanten uitkunnen, we lopen naar rechts naar knooppunt E door de Hamerdijk en lopen hierna terug op de eerder doorgelopen weg, naar links. We lopen zo verder terug naar knooppunt A en gaan zo terug naar het startpunt.</p>  
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy2022 A-walk - <a class="footer" href="#">Privacybeleid</a>
+    </footer>
+</body>
+</html>

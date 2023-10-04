@@ -1,0 +1,21 @@
+.map
+{
+    height:250px;
+    width: 450px;
+    border-radius: 10px;
+    border: 4px white solid;
+}
+@media screen and (max-width: 510px)
+{
+    .map
+    {
+        width: 400px;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    .map
+    {
+        width: 250px;
+    }
+}

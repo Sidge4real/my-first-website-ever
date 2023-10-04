@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mapStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!-- selectie van content die JS invoert op de pagina, het defer attribuut zorgt dat het script pas wordt uitgevoerd zodra de pagina geladen is -->
+        <script src="./js/pageContent.js" defer></script>
+        <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+    <link rel="stylesheet" href="css/mapStyle.css">
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+    <script src="./js/map3Script.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <title>hemiksem</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"> <img id="imgnav" src="assets/Ontwerp_zonder_titel__3_-removebg-preview.png" alt="logo"></a>
+            <ul id="navlist">
+                <li class="nav" id="nav1"><a class="algemeen" href="index.html">Home</a></li>
+                <li id="nav2">
+                    <a class="algemeen" id="dropelement" href="wandeling.html">Wandelingen</a>
+                </li>
+                <li id="nav3"><a class="algemeen" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <figure>
+                <img class="about" src="./assets/Nielse.png" alt="Niel">
+                <figcaption>Natuurgebied de Broek in Niel - <a href="https://www.gva.be/cnt/dmf20210128_92890213">gva.be</a></figcaption>
+            </figure>
+            <article class="pt1a">
+                <h1 class="pt1">Niel</h1>
+                <p>Niel is een plaats en gemeente in de Belgische provincie Antwerpen. De gemeente telt meer dan 10.000 inwoners en ligt ongeveer tien kilometer ten zuiden van de stad Antwerpen, aan de noordelijke rechteroever van de Rupel. De gemeente wordt begrensd door de Rupel, de Wullebeek en de Nielse beek.</p>
+                <h2 class="pt1">Walenhoek</h2>
+                <p>Niel is meer bekend van het natuurgebied Walenhoek, waar ook vele kleiputten bevinden. </p>
+                <h2 class="pt1">Omgeving</h2>
+                <p>Niel is een gemeente aan de buitenkant van Antwerpen gelegen aan de Rupel en bevind zich naast Schelle, Boom en ligt aan de andere kant van de rivier de Rupel ten opzichte van Ruisbroek. </p>
+                <h2 class="pt1">Rupelstreek</h2>
+                <p>Niel is gelegen aan de Rupel en het grondgebied bestaat voornamelijk uit polderland. In het noorden wordt Niel begrensd door de Wullebeek. Natuurgebieden zijn het Nielderbroeck en de Walenhoek.</p>
+                <div class="react">   
+                    <form class="comment" action="">
+                        <textarea class="comment" name="discription" placeholder="antwoord..." required></textarea>
+                        <button class="fa button"><i class="fa fa-plane"></i></button>  <!-- font awesome - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_icon_buttons-->
+                    </form>
+                    <!-- <div class="likes">
+                        <p id="aantalLikes"></p>
+                        <button id="like" class="fa button"><i class="fa fa-heart"></i></button>
+                    </div> -->
+                    <button class="like__btn">
+                        <span id="count">0</span>
+                        <span id="icon"><i class="far fa-heart"></i></span>
+                     </button>
+                </div>            
+            </article>
+        </section>
+
+        <hr class="pt1">
+
+        <section class="navigate">
+            <div class="mk">
+                <article id="map3" class="map">
+                    <div id="apMap"></div>
+                </article>
+                <article class="knooppunten">
+                    <h1 class="pt1">Knooppunten</h1>
+                    <ul>
+                        <li class="knpt">startpunt</li>
+                        <li class="knpt">knooppunt A</li>
+                        <li class="knpt">knooppunt B</li>
+                        <li class="knpt">knooppunt C</li>
+                        <li class="knpt">knooppunt D</li>
+                        <li class="knpt">knooppunt E</li>
+                        <li class="knpt">knooppunt F</li>
+                        <li class="knpt">knooppunt G</li>
+                        <li class="knpt">knooppunt H</li>
+                        <li class="knpt">knooppunt I</li>
+                        <li class="knpt">knooppunt J</li>
+                    </ul>
+                </article>
+            </div>
+            <article class="pt1b">
+                <h1 class="pt1">Route beschrijving</h1>
+                <p> 
+                    We starten de route aan het einde van de Wirixstraat op de weg richting natuurgebied Den Broek. We gaan vervolgens die richting in en gaan naar het eerste knooppunt A om vervolgens door natuurgebied langs de Rupel te wandelen zodra we verder terug naar bewoonde gebieden wandelen. We gaan dus van knooppunt A naar B dat 1,6 km verderop bevind. Eens we op knooppunt B zijn gaan we door de fijne buurt van Niel vervolgens komen we aan op knooppunt C. We wandelen de Boomsestraat af richting ons volgende knooppunt, eens we knooppunt D zijn aangekomen gaan we naar links op dezelfde straat waar we vervolgens aan de linkerkant de Achterweg kunnen nemen om het park te betreden. We lopen door het park en eindpunt van het park, knooppunt G gaan we terug in de richting van ons startpunt. We gaan park uit en steken de Kwaede Wielstraat over en gaan in die straat aan de overkant rechtendoor Eens we aankomen aan het Nielse station gaan we naar links in de Jozef Wauterslaan. We gaan rechtendoor en vervolgen na een tijd verder in de Vaartstraat dat rechtdoor lopend blijvend moeten door wandelen tot we niet meer rechtdoor kunnen, dan gaan we in de weg van op het begin naar rechts en dan komen we op het kruispunt op ons startpunt.
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy2022 A-walk - <a class="footer" href="#">Privacybeleid</a>
+    </footer>
+</body>
+</html>

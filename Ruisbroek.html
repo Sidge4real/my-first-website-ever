@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mapStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!-- selectie van content die JS invoert op de pagina, het defer attribuut zorgt dat het script pas wordt uitgevoerd zodra de pagina geladen is -->
+        <script src="./js/pageContent.js" defer></script>
+        <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+    <link rel="stylesheet" href="css/mapStyle.css">
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+    <script src="./js/map5Script.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <title>hemiksem</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"> <img id="imgnav" src="assets/Ontwerp_zonder_titel__3_-removebg-preview.png" alt="logo"></a>
+            <ul id="navlist">
+                <li class="nav" id="nav1"><a class="algemeen" href="index.html">Home</a></li>
+                <li id="nav2">
+                    <a class="algemeen" id="dropelement" href="wandeling.html">Wandelingen</a>
+                </li>
+                <li id="nav3"><a class="algemeen" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <figure>
+                <img class="about" src="./assets/Ruisbroek.png" alt="Ruisbroek">
+                <figcaption>Zeekanaal - <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hln.be%2Fpuurs-sint-amands%2Fvoorbijganger-merkt-voertuig-op-in-zeekanaal-brussel-schelde~aa48b988%2F177316722%2F&psig=AOvVaw10mv829nh914u2I3aZniIp&ust=1653326455421000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCOCB95LP8_cCFQAAAAAdAAAAABAD">hln.be</a></figcaption>
+            </figure>
+            <article class="pt1a">
+                <h1 class="pt1">Ruisbroek</h1>
+                <p>Ruisbroek is een dorp in de Belgische provincie Antwerpen en een deelgemeente van Puurs-Sint-Amands. In het plaatselijke dialect, het Kleinbrabants wordt het dorp Roasbroek genoemd.</p>
+                <h2 class="pt1">Omgeving</h2>
+                <p>Ruisbroek bevind zich aan de buitenkant van Antwerpen en ligt aan de Ruppel. Ruisbroek ligt aan de andere kant van de Ruppel tegenover Niel en Schelle. Ruisbeek heeft veel openvlakten en is minder bevolkt dan gemeentes rondom zich. Ruisbroek is een vrij rustig gebied</p>
+                <h2 class="pt1">Rupelstreek</h2>
+                <p>Ruisbroek ligt aan de Ruppel. <a class="pt" href="https://www.toerismerupelstreek.be/">Meer weten?</a></p>
+                <div class="react">   
+                    <form class="comment" action="">
+                        <textarea class="comment" name="discription" placeholder="antwoord..." required></textarea>
+                        <button class="fa button"><i class="fa fa-plane"></i></button>  <!-- font awesome - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_icon_buttons-->
+                    </form>
+                    <!-- <div class="likes">
+                        <p id="aantalLikes"></p>
+                        <button id="like" class="fa button"><i class="fa fa-heart"></i></button>
+                    </div> -->
+                    <button class="like__btn">
+                        <span id="count">0</span>
+                        <span id="icon"><i class="far fa-heart"></i></span>
+                     </button>
+                </div>            
+            </article>
+        </section>
+
+        <hr class="pt1">
+
+        <section class="navigate">
+            <div class="mk">
+                <article id="map5" class="map">
+                    <div id="apMap"></div>
+                </article>
+                <article class="knooppunten">
+                    <h1 class="pt1">Knooppunten</h1>
+                    <ul>
+                        <li class="knpt">startpunt</li>
+                    </ul>
+                </article>
+            </div>
+            <article class="pt1b">
+                <h1 class="pt1">Route beschrijving</h1>
+                <p>We starten de route op knooppunt 322 in de Tulpenlaan en gaan naar Knooppunt 321 waar een mogelijkheid is om de Noord kasteelgracht & Zuidkasteelgracht te bezichtigen.  Het kasteel zelf is niet toegankelijk. We lopen verder naar knooppunt 325 om dan vervolgens richting knooppunt 7 te gaan in een groene gebied van Hemiksem.
+                </p>
+                <p>We zijn 2,7 km verder in de wandeltocht en gaan verder door naar de knooppunt 6 om langs het water van de Schelde te wandelen. We lopen langs de Schelde richting knooppunt 327 om verder terug te lopen richting start plaats van de route. We lopen verder naar knooppunt 324 door groen gebied.
+                    Een leuk idee is om op de middag op knooppunt 324 of 323 af te wijken om iets te eten ter plekken of in de omgeving waar zeker en vast mogelijkheden bied. We wandelden 5,3km tot aan de middag of stopte later aan knooppunt 323 wat 7,2 km in totaal gewandeld. Om de dag te balanceren is knooppunt 324 een leuke middag stop plaats om na de middag nog genoeg wandel tijd aanbied. 
+                </p>
+                <p>We gaan verder na de middag door naar knooppunt 322 (of eerst langs knooppunt 323) om later te eindigen.
+                </p> 
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy2022 A-walk - <a class="footer" href="#">Privacybeleid</a>
+    </footer>
+</body>
+</html>

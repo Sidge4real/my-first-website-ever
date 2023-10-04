@@ -1,0 +1,871 @@
+/* tijdelijke test == werkt */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+.like__btn {
+    width: 60px;
+    height: 40px;
+    background: #9CCDF8;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: #e8efff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    position: relative;
+  }
+  .react
+  {
+    align-items: flex-end;
+    justify-items: end;
+  }
+
+body
+{
+    display: grid;
+    margin: 0px;
+    background-color:#9CCDF8;
+}
+/* design & animation inputs */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  :focus {
+    outline: none; 
+  }
+  /* ----------------------- */
+header.index
+{
+    background-image: url(../assets/main_bk.png);
+    padding: 0px;
+    height: 100vh;
+}
+nav
+{
+    display: flex;
+}
+#navlist
+{
+    right: 20px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    padding: 0px;
+}
+ul
+{
+    padding: 0px;
+}
+a
+{
+color: white;
+text-decoration: none;
+}
+a:hover
+{
+    color: grey;
+}
+nav ul li
+{
+    list-style: none;
+}
+#navlist > li
+{
+    margin-left:10px;
+    display: inline;
+    color: white;
+}
+.dropdown
+{
+    display: none;
+}
+#dropelement:hover ~.dropdown
+{
+    display: inline;
+}
+#nav2:hover .dropdown{
+    display: inline;
+} 
+.dropdown > li
+{
+    font-size: medium;
+}
+.dropdown > li:hover
+{
+    background-color: white;
+}
+.dropdown > li:hover a
+{
+    color: grey;
+}
+footer
+{
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+a.footer
+{
+    text-decoration: underline;
+}
+
+#imgnav
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+figcaption
+{
+    color: white;
+    text-align: center;
+    margin-right: 50px;
+}
+p
+{
+    color: white;
+}
+
+/* ---- scrollbar ----- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white ; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: gray; 
+  }
+  /* -------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* index.html */
+#ad
+{
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    width: 50px;
+    color: white;
+    font-size: 40px;
+}
+h2.index
+{
+    text-align: center;
+    color: white;
+    font-size: 40px
+}
+figure.index
+{
+    margin: 0px;
+}
+img.index
+{
+    align-items: center;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: auto;
+}
+figcaption.index
+{
+    text-align: center;
+    color: white;
+}
+p.index
+{
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+a.index
+{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* wandeling.html */
+input.zoek
+{
+    border:white solid 1px;
+    border-radius: 5px;
+    background-color: #9CCDF8;
+    margin-left: 10px;
+    padding: 3px;
+    margin-top: 20px;
+    color: grey;
+}
+.artikels
+{
+    text-align: center;
+    height: auto;
+}
+input.zoek::placeholder
+{
+    color: white;
+}
+input.zoek:focus
+{
+    border:grey solid 1px;
+}
+#reeks1
+{
+    display: grid;
+    grid-template-columns: 
+    1fr 1fr 1fr;
+}
+h1.reeks
+{
+    color: white;
+    text-align: center;
+}
+p.reeks
+{
+    color: white;
+    padding-left: 10px;
+    text-align: center;
+}
+a.reeks
+{
+    color: white;
+    text-decoration: underline;
+}
+a.reeks:hover
+{
+    color: grey;  
+} /*werkt niet mee met de algemene link hover begin style.css*/
+#Hemiksem
+{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #0095ff22;
+}
+img.Hemiksem
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+#Willembroek
+{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #0095ff22;
+}
+img.Willembroek
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+#Nielse
+{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #0095ff22;
+}
+img.Nielse
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+#Schelle
+{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #0095ff22;
+}
+img.Schelle
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+#Ruisbroek
+{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #0095ff22;
+}
+img.Ruisbroek
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+#Bornem
+{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #0095ff22;
+}
+img.Bornem
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* contact.html */
+.contact
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 500px;
+    position: relative;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.contacth1
+{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+/* focus begin css: general animation/design */
+  /* inputvelden: */
+  form
+  {
+      align-items: center;
+  }
+  .content {
+    width: 300px;
+    position: relative;
+    left: 20px;
+    margin-bottom: 10px;
+  }
+  .input {
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    border-bottom: 1px solid grey;
+    background-color: #9CCDF8;
+    color: white;
+    margin-top: 10px;
+  }
+  .input ~ .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+  }
+  .input:focus ~ .border {
+    width: 100%;
+    transition: 0.5s;
+  }
+.border {
+      border: 1px solid white !important;
+  }
+  .input::placeholder
+  {
+      color: grey;
+  }
+  .input::placeholder:focus
+  {
+    color: white;
+  }
+/* contactpersoon */
+.contactpersoon[type=text],select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0px 0px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #9CCDF8;
+    color: white;
+    border: 1px solid gray;
+  }
+  .contactpersoon[type=text],select:focus
+  {
+      transition: 0.5s;
+      border-color: white;
+  }
+  label.contactpersoon
+  {
+    margin-left: 20px;
+  }
+  /* TEXTAREA */
+  label.textarea
+  {
+      top: 5px;
+      color: white;
+      text-decoration: underline;
+      margin-left: 20px;
+      font-size: larger;
+  }
+  textarea.textarea
+  {
+      background-color:#9CCDF8;
+      border: none;
+      width: 90%;
+      margin-left: 20px;
+      resize: none;
+      color: white;
+      height: 150px;
+      margin-top: 5px;
+  }
+  textarea:focus ~ label.textarea
+  {
+    color: white;
+  }
+  /* ----------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* algemeen : */
+  form
+  {
+      color: white;
+  } 
+  /* ----------------------- */
+/* range input */
+.range
+{
+    color: white;
+    accent-color: grey;
+    margin-left: 20px;
+    width: 200px;
+}
+/* -------------------------- */
+/* HR */
+hr
+{
+    width: 100%;
+    accent-color: grey;
+}
+/* -------------------------- */
+/* submit */
+.submit
+{
+    background-color: lightgray;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    /* align-items: center; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.submit:hover
+{
+    background-color: grey;
+}
+/* -------------------------- */
+/* wandelingen pagina's */
+main
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.about
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+a.pt
+{
+    text-decoration: underline;
+}
+img.about
+{
+    height:250px;
+    width: 450px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+figcaption
+{
+    padding-bottom: 10px;
+}
+ article.pt1a
+{
+    border-radius: 10px;
+    border: 1px white solid;
+    width: 500px;
+    height:600px;
+    color: white;
+    padding: 20px;
+}
+.pt1
+{
+    text-align: center;
+}
+figure
+{
+    margin: 0px;
+}
+h1.pt1
+{
+    font-size: x-large;
+    color:white;
+}
+h2.pt1
+{   
+    font-size: large;
+}
+.react
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+textarea.comment
+{
+    resize: none;  
+    background-color: #9CCDF8;
+    border: none;
+    width: 180px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+}
+textarea.comment:focus ~.comment
+{
+    border-color: grey ;
+}
+form.comment
+{
+    display: flex;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 5px;
+    height: 50px;
+    padding-left: 12px;
+    margin-top: 25px;
+}
+.icon
+{
+    width: 25px;
+    height: 25px;
+}
+.fa
+{
+    background-color: #9CCDF8;
+    border: none;
+    color: white;
+}
+.fa-plane:hover
+{
+    color: grey;
+}
+.button
+{
+    margin-right: 5px;
+}
+
+.likes
+{
+    margin-left: 180px;
+    margin-top: 22px;
+    display: flex;
+}
+.fa-heart:hover
+{
+    color: grey;
+}
+
+hr.pt1
+{
+    margin-bottom: 40px;
+}
+
+.navigate
+{
+    display: grid;
+    grid-template-columns:
+     1fr 1fr;
+}
+
+.pt1b
+{
+    border-radius: 10px;
+    border: 1px white solid;
+    width: 500px;
+    padding: 20px;
+}
+.knooppunten
+{
+    border: 1px solid white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 450px;
+    border-radius: 5px;
+}
+.knpt
+{
+    list-style: none;
+    padding: 0 0.5rem;
+    color: white;
+}
+/* -------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* MEDIAQUERIES */
+@media screen and (max-width: 1000px)
+{
+    .about
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.navigate
+{
+    display: grid;
+    grid-template-columns:
+     1fr;
+     position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     align-items: center;
+}
+figcaption
+{
+    margin-right: 0px;
+}
+.knooppunten
+{
+    width: auto;
+}
+.mk
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+}
+
+@media screen and (max-width: 600px)
+{
+    /* wandeling: */
+    #reeks1
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    /* index: */
+    img.index
+    {
+        align-items: center;
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+        height: auto; 
+    }
+}
+
+@media screen and (max-width: 510px)
+{
+    .about
+    {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+    .contact
+    {
+        width: 300px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .content
+    {
+        width: 200px;
+    }
+    textarea
+    {
+        height: 130px;
+    }
+    article.pt1a
+    {
+        width: 400px;
+        height: 700px;
+    }
+    .likes
+    {
+        margin-left: 100px;
+    }
+    img.about
+    {
+        width: 400px;
+    }
+    .pt1b
+    {
+        width: 400px;
+        height: 700px;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    /* wandeling: */
+    #reeks1
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    /* index: */
+    img.index
+    {
+        align-items: center;
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: auto; 
+    }
+
+    article.pt1a article.pt1b img.about
+    {
+        width: 250px;
+    }
+}
+
+/* index: */
+@media screen and (max-width: 300px)
+{
+    img.index
+    {
+        align-items: center;
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: auto; 
+    }
+}
